@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Sacred Heart College</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #063970;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        nav {
+            background-color: #222;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 20px;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        .heading {
+            text-align: center;
+            padding: 30px;
+            color: #063970;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+        }
+
+        .course-section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+
+        .course-section h2 {
+            color: #063970;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .course-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .course-box {
+            background-color: #e8f0fe;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            border: 1px solid #063970;
+        }
+
+        .course-box h3 {
+            color: #063970;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #063970;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        @media(max-width: 768px) {
+            .course-list {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+            .click{
+                background-color: yellow;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Sacred Heart Arts and Science College</h1>
+        <p>Madurai, Tamil Nadu</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="admission.html">Admission</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <h1 class="heading">Our Courses</h1>
+
+    <div class="container">
+
+        <div class="course-section">
+            <h2>Under Graduate (UG) Courses</h2>
+
+            <div class="course-list">
+
+                <div class="course-box">
+                    <h3>B.Sc Computer Science</h3>
+                    <p>Duration: 3 Years</p>
+                </div>
+
+                <div class="course-box">
+                    <h3>B.Sc Information Technology</h3>
+                    <p>Duration: 3 Years</p>
+                </div>
+
+                <div class="course-box">
+                    <h3>BCA</h3>
+                    <p>Duration: 3 Years</p>
+                </div>
+
+                <div class="course-box">
+                    <h3>B.Sc Zoology</h3>
+                    <p>Duration: 3 Years</p>
+                </div>
+
+                <div class="course-box">
+                    <h3>B.Sc Botany</h3>
+                    <p>Duration: 3 Years</p>
+                </div>
+
+                <div class="course-box">
+                    <h3>BA English</h3>
+                    <p>Duration: 3 Years</p>
+                </div>
+
+                <div class="course-box">
+                    <h3>BA Tamil</h3>
+                    <p>Duration: 3 Years</p>
+                </div>
+
+                <div class="course-box">
+                    <h3>BBA</h3>
+                    <p>Duration: 3 Years</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="course-section">
+            <h2>Post Graduate (PG) Courses</h2>
+
+            <div class="course-list">
+
+                <div class="course-box">
+                    <h3>M.Sc Computer Science</h3>
+                    <p>Duration: 2 Years</p>
+                </div>
+
+                <div class="course-box">
+                    <h3>MCA</h3>
+                    <p>Duration: 2 Years</p>
+                </div>
+
+                <div class="course-box">
+                    <h3>M.Sc Zoology</h3>
+                    <p>Duration: 2 Years</p>
+                </div>
+
+                <div class="course-box">
+                    <h3>M.Sc Botany</h3>
+                    <p>Duration: 2 Years</p>
+                </div>
+
+                <div class="course-box">
+                    <h3>MA Tamil</h3>
+                    <p>Duration: 2 Years</p>
+                </div>
+
+                <div class="course-box">
+                    <h3>MA English</h3>
+                    <p>Duration: 2 Years</p>
+                </div>
+
+                <div class="course-box">
+                    <h3>MBA</h3>
+                    <p>Duration: 2 Years</p>
+                </div>
+
+            </div>
+            
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Sacred Heart Arts and Science College, Madurai</p>
+    </footer>
+
+</body>
+</html>

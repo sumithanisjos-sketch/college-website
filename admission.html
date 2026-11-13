@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admission Form</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eaf1f8;
+        }
+
+        header {
+            background-color: #063970;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        nav {
+            background-color: #222;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 20px;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        .heading {
+            text-align: center;
+            color: #063970;
+            margin: 25px;
+        }
+
+        
+.form-container {
+    background-color: white;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 8%;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        
+input, select, textarea {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+        }
+
+        .btn {
+            width: 100%;
+            background-color: #174a85;
+            color: white;
+            padding: 12px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: green;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: lightgreen;
+            border-radius: 5px;
+            display: none;
+        }
+
+        footer {
+            background-color: #063970;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        @media(max-width: 768px) {
+            .form-container {
+                width: 90%;
+                padding: 20px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Sacred Heart Arts and Science College</h1>
+        <p>Madurai, Tamil Nadu</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="admission.html">Admission</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <h1 class="heading">Student Admission Form</h1>
+
+    <div class="form-container">
+
+        <form id="admissionForm">
+
+            <label>Student Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label>Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label>Mobile Number</label>
+            <input type="tel" id="phone"
+            pattern="[0-9 +()-]{8,16}"
+            placeholder="Enter mobile number" required>
+
+            <label>Select Course</label>
+            <select id="course" required>
+                <option value="">Choose Course</option>
+
+                <optgroup label="UG Courses">
+                    <option>B.Sc Computer Science</option>
+                    <option>B.Sc Information Technology</option>
+                    <option>BCA</option>
+                    <option>B.Sc Zoology</option>
+                    <option>B.Sc Botany</option>
+                    <option>BA English</option>
+                    <option>BA Tamil</option>
+                    <option>BBA</option>
+                </optgroup>
+
+                <optgroup label="PG Courses">
+                    <option>M.Sc Computer Science</option>
+                    <option>MCA</option>
+                    <option>M.Sc Zoology</option>
+                    <option>M.Sc Botany</option>
+                    <option>MA Tamil</option>
+                    <option>MA English</option>
+                    <option>MBA</option>
+                </optgroup>
+            </select>
+
+            <label>Your Message</label>
+            <textarea id="message" rows="4"
+            placeholder="Enter your message"></textarea>
+
+            <button type="submit" class="btn">
+                Submit Enquiry
+            </button>
+
+        </form>
+
+        <div id="result"></div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Sacred Heart Arts and Science College, Madurai</p>
+    </footer>
+
+    <script>
+        document.getElementById("admissionForm").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let course = document.getElementById("course").value;
+
+            let result = document.getElementById("result");
+
+            result.style.display = "block";
+
+            result.innerHTML =
+                "<h3>Application Submitted Successfully!</h3>" +
+                "<p>Student Name: " + name + "</p>" +
+                "<p>Email: " + email + "</p>" +
+                "<p>Mobile: " + phone + "</p>" +
+                "<p>Selected Course: " + course + "</p>";
+
+            document.getElementById("admissionForm").reset();
+
+        });
+    </script>
+
+</body>
+</html>

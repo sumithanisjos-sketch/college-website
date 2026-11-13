@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us - Sacred Heart College</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef3f9;
+        }
+
+        header {
+            background-color: #174a85;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #0d315c;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            padding: 40px 8%;
+        }
+
+        h2 {
+            text-align: center;
+            color: #174a85;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 35px;
+            color: #555;
+        }
+
+        .contact-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info {
+            background-color: #174a85;
+            color: white;
+            padding: 35px;
+            border-radius: 10px;
+        }
+
+        .contact-info h3 {
+            font-size: 25px;
+            margin-bottom: 25px;
+        }
+
+        .contact-info p {
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+
+        .contact-form {
+            background-color: white;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        .contact-form h3 {
+            color: #174a85;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 13px;
+            margin-top: 8px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        textarea {
+            height: 120px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 20px;
+            background-color: #174a85;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: green;
+        }
+
+        footer {
+            background-color: #0d315c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media(max-width: 700px) {
+            .contact-box {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Sacred Heart Arts and Science College</h1>
+        <p>Education for Excellence</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="admission.html">Admission</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+
+        <h2>Contact Us</h2>
+
+        <p class="intro">
+            We are happy to hear from you.
+            Contact us for more information.
+        </p>
+
+        <div class="contact-box">
+
+            <div class="contact-info">
+
+                <h3>College Information</h3>
+
+                <p>
+                    <b>College Name:</b><br>
+                    Sacred Heart Arts and Science College
+                </p>
+
+                <p>
+                    <b>Address:</b><br>
+                    St,mary's church campus,madurai
+                </p>
+
+                <p>
+                    <b>Phone:</b><br>
+                    +91 9876543210
+                </p>
+
+                <p>
+                    <b>Email:</b><br>
+                    info@college.com
+                </p>
+
+                <p>
+                    <b>Working Hours:</b><br>
+                    Monday - Saturday<br>
+                    9:00 AM - 5:00 PM
+                </p>
+
+            </div>
+
+            <div class="contact-form">
+
+                <h3>Send Us a Message</h3>
+
+                <form id="contactForm">
+
+                    <label>Your Name</label>
+                    <input type="text" id="name"
+                    placeholder="Enter your name" required>
+
+                    <label>Email Address</label>
+                    <input type="email" id="email"
+                    placeholder="Enter your email" required>
+
+                    <label>Subject</label>
+                    <input type="text" id="subject"
+                    placeholder="Enter subject" required>
+
+                    <label>Message</label>
+                    <textarea id="message"
+                    placeholder="Enter your message"
+                    required></textarea>
+
+                    <button type="submit">Send Message</button>
+
+                </form>
+
+                <p id="result"></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Sacred Heart Arts and Science College</p>
+        <p>All Rights Reserved</p>
+    </footer>
+
+    <script>
+
+        document.getElementById("contactForm")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            let name = document.getElementById("name").value;
+
+            document.getElementById("result").innerHTML =
+            "Thank You " + name + "! Your Message Submitted Successfully.";
+
+        });
+
+    </script>
+
+</body>
+</html>
